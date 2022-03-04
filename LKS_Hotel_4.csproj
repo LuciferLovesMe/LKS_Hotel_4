@@ -148,6 +148,9 @@
     <EmbeddedResource Include="MainLogin.resx">
       <DependentUpon>MainLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MasterEmployee.resx">
+      <DependentUpon>MasterEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterFD.resx">
       <DependentUpon>MasterFD.cs</DependentUpon>
     </EmbeddedResource>
