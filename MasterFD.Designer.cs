@@ -79,19 +79,19 @@ namespace LKS_Hotel_4
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(801, 281);
+            this.label11.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(814, 285);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 23);
+            this.label11.Size = new System.Drawing.Size(61, 19);
             this.label11.TabIndex = 24;
             this.label11.Text = "Search";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(877, 282);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 26);
+            this.textBox1.Size = new System.Drawing.Size(217, 23);
             this.textBox1.TabIndex = 23;
             // 
             // dataGridView1
@@ -418,62 +418,62 @@ namespace LKS_Hotel_4
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(351, 83);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(352, 26);
+            this.textBox2.Size = new System.Drawing.Size(352, 22);
             this.textBox2.TabIndex = 26;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(347, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 19);
+            this.label12.Size = new System.Drawing.Size(43, 14);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Name";
+            this.label12.Text = "Name :";
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Food",
             "Drink"});
             this.comboBox1.Location = new System.Drawing.Point(742, 83);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(352, 26);
+            this.comboBox1.Size = new System.Drawing.Size(352, 22);
             this.comboBox1.TabIndex = 28;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(738, 61);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 19);
+            this.label13.Size = new System.Drawing.Size(38, 14);
             this.label13.TabIndex = 27;
-            this.label13.Text = "Type";
+            this.label13.Text = "Type :";
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(351, 146);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(352, 26);
+            this.textBox3.Size = new System.Drawing.Size(352, 22);
             this.textBox3.TabIndex = 30;
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(347, 124);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 19);
+            this.label14.Size = new System.Drawing.Size(66, 14);
             this.label14.TabIndex = 29;
-            this.label14.Text = "Price (Rp)";
+            this.label14.Text = "Price (Rp) :";
             // 
             // pictureBox1
             // 
@@ -501,12 +501,12 @@ namespace LKS_Hotel_4
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(739, 124);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 19);
+            this.label15.Size = new System.Drawing.Size(45, 14);
             this.label15.TabIndex = 31;
-            this.label15.Text = "Photo";
+            this.label15.Text = "Photo :";
             // 
             // MasterFD
             // 
