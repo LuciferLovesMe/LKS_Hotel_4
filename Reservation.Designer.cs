@@ -98,6 +98,7 @@ namespace LKS_Hotel_4
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel_guest.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_repcheck.SuspendLayout();
@@ -438,6 +439,7 @@ namespace LKS_Hotel_4
             this.button3.TabIndex = 13;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label15
             // 
@@ -779,11 +781,11 @@ namespace LKS_Hotel_4
             // 
             this.lbltotal.AutoSize = true;
             this.lbltotal.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(785, 451);
+            this.lbltotal.Location = new System.Drawing.Point(827, 449);
             this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(125, 23);
+            this.lbltotal.Size = new System.Drawing.Size(94, 23);
             this.lbltotal.TabIndex = 37;
-            this.lbltotal.Text = "Rp. 000.000.00";
+            this.lbltotal.Text = "000.000.00";
             // 
             // button8
             // 
@@ -820,11 +822,22 @@ namespace LKS_Hotel_4
             this.textBox6.Size = new System.Drawing.Size(100, 21);
             this.textBox6.TabIndex = 41;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(785, 449);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(36, 23);
+            this.label24.TabIndex = 42;
+            this.label24.Text = "Rp.";
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 680);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -962,5 +975,6 @@ namespace LKS_Hotel_4
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.Label label24;
     }
 }

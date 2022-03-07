@@ -267,6 +267,18 @@ namespace LKS_Hotel_4
             loadgrid(" where name like '%" + textBox1.Text + "%'");
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                MainLogin main = new MainLogin();
+                this.Hide();
+                main.ShowDialog();
+            }
+        
+        }
+
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == 8);

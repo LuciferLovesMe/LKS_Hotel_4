@@ -27,7 +27,9 @@ namespace LKS_Hotel_4
             loadprice();
 
             textBox3.Enabled = false;
-            
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+            textBox6.Visible = false;
             lblcode.Text = loadcode();
             lblname.Text = Model.name;
             lbltime.Text = DateTime.Now.ToString("dddd, dd-MM-yyyy");
@@ -278,6 +280,12 @@ namespace LKS_Hotel_4
                 dataGridView4.Rows[row].Cells[4].Value = numericUpDown1.Value * Convert.ToInt32(textBox3.Text);
                 lbltotal.Text = counttotal().ToString();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddCustomer add = new AddCustomer();
+            add.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
