@@ -113,7 +113,7 @@ namespace LKS_Hotel_4
             // 
             // panel_room
             // 
-            this.panel_room.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
+            this.panel_room.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(65)))), ((int)(((byte)(100)))));
             this.panel_room.Controls.Add(this.label9);
             this.panel_room.Controls.Add(this.label10);
             this.panel_room.Cursor = System.Windows.Forms.Cursors.Hand;

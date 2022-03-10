@@ -263,6 +263,7 @@ namespace LKS_Hotel_4
             this.panel_room.Name = "panel_room";
             this.panel_room.Size = new System.Drawing.Size(312, 82);
             this.panel_room.TabIndex = 4;
+            this.panel_room.Click += new System.EventHandler(this.panel_room_Click);
             // 
             // label9
             // 
@@ -274,6 +275,7 @@ namespace LKS_Hotel_4
             this.label9.Size = new System.Drawing.Size(51, 19);
             this.label9.TabIndex = 1;
             this.label9.Text = "Room";
+            this.label9.Click += new System.EventHandler(this.panel_room_Click);
             // 
             // label10
             // 
@@ -285,6 +287,7 @@ namespace LKS_Hotel_4
             this.label10.Size = new System.Drawing.Size(54, 37);
             this.label10.TabIndex = 0;
             this.label10.Text = "";
+            this.label10.Click += new System.EventHandler(this.panel_room_Click);
             // 
             // panel_roomtype
             // 
@@ -295,6 +298,7 @@ namespace LKS_Hotel_4
             this.panel_roomtype.Name = "panel_roomtype";
             this.panel_roomtype.Size = new System.Drawing.Size(312, 82);
             this.panel_roomtype.TabIndex = 4;
+            this.panel_roomtype.Click += new System.EventHandler(this.panel_roomtype_Click);
             // 
             // label7
             // 
@@ -306,6 +310,7 @@ namespace LKS_Hotel_4
             this.label7.Size = new System.Drawing.Size(88, 19);
             this.label7.TabIndex = 1;
             this.label7.Text = "Room Type";
+            this.label7.Click += new System.EventHandler(this.panel_roomtype_Click);
             // 
             // label8
             // 
@@ -317,6 +322,7 @@ namespace LKS_Hotel_4
             this.label8.Size = new System.Drawing.Size(54, 37);
             this.label8.TabIndex = 0;
             this.label8.Text = "";
+            this.label8.Click += new System.EventHandler(this.panel_roomtype_Click);
             // 
             // panel_item
             // 
@@ -327,6 +333,7 @@ namespace LKS_Hotel_4
             this.panel_item.Name = "panel_item";
             this.panel_item.Size = new System.Drawing.Size(312, 82);
             this.panel_item.TabIndex = 3;
+            this.panel_item.Click += new System.EventHandler(this.panel_item_Click);
             // 
             // label5
             // 
@@ -338,6 +345,7 @@ namespace LKS_Hotel_4
             this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 1;
             this.label5.Text = "Items";
+            this.label5.Click += new System.EventHandler(this.panel_item_Click);
             // 
             // label6
             // 
@@ -349,6 +357,7 @@ namespace LKS_Hotel_4
             this.label6.Size = new System.Drawing.Size(54, 37);
             this.label6.TabIndex = 0;
             this.label6.Text = "";
+            this.label6.Click += new System.EventHandler(this.panel_item_Click);
             // 
             // panel_fd
             // 
@@ -359,6 +368,7 @@ namespace LKS_Hotel_4
             this.panel_fd.Name = "panel_fd";
             this.panel_fd.Size = new System.Drawing.Size(312, 82);
             this.panel_fd.TabIndex = 2;
+            this.panel_fd.Click += new System.EventHandler(this.panel_fd_Click);
             // 
             // label3
             // 
@@ -370,6 +380,7 @@ namespace LKS_Hotel_4
             this.label3.Size = new System.Drawing.Size(135, 19);
             this.label3.TabIndex = 1;
             this.label3.Text = "Foods and Drinks";
+            this.label3.Click += new System.EventHandler(this.panel_fd_Click);
             // 
             // label4
             // 
@@ -381,10 +392,11 @@ namespace LKS_Hotel_4
             this.label4.Size = new System.Drawing.Size(54, 39);
             this.label4.TabIndex = 0;
             this.label4.Text = "";
+            this.label4.Click += new System.EventHandler(this.panel_fd_Click);
             // 
             // panel_employee
             // 
-            this.panel_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
+            this.panel_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(65)))), ((int)(((byte)(100)))));
             this.panel_employee.Controls.Add(this.label2);
             this.panel_employee.Controls.Add(this.label1);
             this.panel_employee.Cursor = System.Windows.Forms.Cursors.Hand;
