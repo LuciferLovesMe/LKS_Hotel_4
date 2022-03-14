@@ -52,6 +52,8 @@ namespace LKS_Hotel_4
             this.panel_guest = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel_repcheck.SuspendLayout();
             this.panel_checkout.SuspendLayout();
             this.panel_item.SuspendLayout();
@@ -337,11 +339,35 @@ namespace LKS_Hotel_4
             this.label12.Text = "";
             this.label12.Click += new System.EventHandler(this.panel_guest_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Bahnschrift", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(100)))));
+            this.label13.Location = new System.Drawing.Point(652, 238);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(173, 42);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Hotel LKS";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe MDL2 Assets", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(100)))));
+            this.label14.Location = new System.Drawing.Point(643, 102);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(190, 133);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "";
+            // 
             // MainFrontOffice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 680);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
@@ -394,5 +420,7 @@ namespace LKS_Hotel_4
         private System.Windows.Forms.Panel panel_guest;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

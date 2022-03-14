@@ -434,6 +434,7 @@ namespace LKS_Hotel_4
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(352, 23);
             this.textBox2.TabIndex = 34;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label12
             // 

@@ -56,7 +56,7 @@ namespace LKS_Hotel_4
                     connection.Close();
                     if(Model.jobId == 1)
                     {
-                        MainFrontOffice main = new MainFrontOffice();
+                        Reservation main = new Reservation();
                         this.Hide();
                         main.ShowDialog();
                     }

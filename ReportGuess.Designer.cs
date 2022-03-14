@@ -87,7 +87,7 @@ namespace LKS_Hotel_4
             // 
             // panel_guest
             // 
-            this.panel_guest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
+            this.panel_guest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(65)))), ((int)(((byte)(100)))));
             this.panel_guest.Controls.Add(this.label11);
             this.panel_guest.Controls.Add(this.label12);
             this.panel_guest.Cursor = System.Windows.Forms.Cursors.Hand;

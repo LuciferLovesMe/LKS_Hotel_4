@@ -198,7 +198,7 @@ namespace LKS_Hotel_4
             }
             else if (cond == 2 && val())
             {
-                command = new SqlCommand("update roomType set name = '" + textBox2.Text.Replace("'", "`") + "', capacity = " + numericUpDown1.Value + ", roomPrice = " + Convert.ToInt32(textBox3.Text) + ", photo = @img", connection);
+                command = new SqlCommand("update roomType set name = '" + textBox2.Text.Replace("'", "`") + "', capacity = " + numericUpDown1.Value + ", roomPrice = " + Convert.ToInt32(textBox3.Text) + ", photo = @img where id ="+id, connection);
                 command.Parameters.AddWithValue("@img", Encrypt.encode(pictureBox1.Image));
                 try
                 {

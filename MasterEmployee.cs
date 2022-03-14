@@ -73,6 +73,8 @@ namespace LKS_Hotel_4
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[9].Visible = false;
+
+            dataGridView1.Columns[10].HeaderText = "Job";
         }
 
         void clear()
@@ -304,7 +306,7 @@ namespace LKS_Hotel_4
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            loadgrid(" where name like '%" + textBox1.Text.Replace("'", "`") + "%' or username like '%" + textBox1.Text.Replace("'", "`") + "%'");
+            loadgrid(" where employee.name like '%" + textBox1.Text.Replace("'", "`") + "%' or username like '%" + textBox1.Text.Replace("'", "`") + "%' or job.name like '%" + textBox1.Text.Replace("'", "`") + "%'");
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -333,6 +335,10 @@ namespace LKS_Hotel_4
                 pictureBox1.Image = Image.FromStream(stream);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+
+            comboBox1.SelectedValue = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[6].Value);
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
+
         }
 
         private void btn_upload_Click(object sender, EventArgs e)
@@ -346,6 +352,11 @@ namespace LKS_Hotel_4
                 pictureBox1.Image = bmp;
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == 8);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

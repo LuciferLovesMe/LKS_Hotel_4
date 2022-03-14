@@ -59,6 +59,7 @@ namespace LKS_Hotel_4
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel_guest.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_repcheck.SuspendLayout();
@@ -147,7 +148,7 @@ namespace LKS_Hotel_4
             // 
             // panel_repcheck
             // 
-            this.panel_repcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
+            this.panel_repcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(65)))), ((int)(((byte)(100)))));
             this.panel_repcheck.Controls.Add(this.label9);
             this.panel_repcheck.Controls.Add(this.label10);
             this.panel_repcheck.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -418,11 +419,23 @@ namespace LKS_Hotel_4
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(354, 111);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(56, 18);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Today";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // ReportCheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 680);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
@@ -490,5 +503,6 @@ namespace LKS_Hotel_4
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

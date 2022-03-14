@@ -379,7 +379,9 @@ namespace LKS_Hotel_4
                     else
                     {
                         MessageBox.Show("Successfully add new reservation", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lblcode.Text = loadcode();
                         clear();
+                        lbltotal.Text = counttotal().ToString();
                     }
                 }
                 catch (Exception ex)

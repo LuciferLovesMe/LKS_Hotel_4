@@ -266,7 +266,7 @@ namespace LKS_Hotel_4
             // 
             // panel_checkin
             // 
-            this.panel_checkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
+            this.panel_checkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(65)))), ((int)(((byte)(100)))));
             this.panel_checkin.Controls.Add(this.label3);
             this.panel_checkin.Controls.Add(this.label4);
             this.panel_checkin.Cursor = System.Windows.Forms.Cursors.Hand;

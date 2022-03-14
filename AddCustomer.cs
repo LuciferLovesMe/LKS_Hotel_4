@@ -114,7 +114,7 @@ namespace LKS_Hotel_4
                     g = "Female";
                 }
                 int i = Convert.ToInt32(DateTime.Now.ToString("yyyy")) - Convert.ToInt32(dateTimePicker1.Value.ToString("yyyy"));
-                command = new SqlCommand("insert into customer values('" + textBox2.Text.Replace("'", "`") + "', '" + textBox1.Text + "', '" + textBox3.Text.Replace("'", "`") + "', '" + g + "', '" + textBox4.Text + "', '" + dateTimePicker1.Value.Date + "', " + i + ")", connection);
+                command = new SqlCommand("insert into customer values('" + textBox1.Text.Replace("'", "`") + "', '" + textBox2.Text + "', '" + textBox3.Text.Replace("'", "`") + "', '" + g + "', '" + textBox4.Text + "', '" + dateTimePicker1.Value.Date + "', " + i + ")", connection);
                 try
                 {
                     connection.Open();

@@ -110,7 +110,15 @@ namespace LKS_Hotel_4
             }
             else
             {
-                string com = "select reservation.id, reservation.bookingCode, reservationRoom.startDateTime, reservationRoom.durationNights, reservationRoom.checkInDateTime, reservationRoom.checkOutDateTime, reservationRoom.roomPrice, room.roomNumber, room.roomFloor, room.description from reservation join reservationRoom on reservation.id = reservationRoom.reservationId join room on reservationroom.roomId = room.id where reservationRoom.checkInDatetime >= '" + dateTimePicker1.Value + "' ";
+                string com;
+                if (checkBox1.Checked)
+                {
+                    com = "select reservation.id, reservation.bookingCode, reservationRoom.startDateTime, reservationRoom.durationNights, reservationRoom.checkInDateTime, reservationRoom.checkOutDateTime, reservationRoom.roomPrice, room.roomNumber, room.roomFloor, room.description from reservation join reservationRoom on reservation.id = reservationRoom.reservationId join room on reservationroom.roomId = room.id where reservationRoom.checkInDatetime = '"+DateTime.Today+"'";
+                }
+                else
+                {
+                    com = "select reservation.id, reservation.bookingCode, reservationRoom.startDateTime, reservationRoom.durationNights, reservationRoom.checkInDateTime, reservationRoom.checkOutDateTime, reservationRoom.roomPrice, room.roomNumber, room.roomFloor, room.description from reservation join reservationRoom on reservation.id = reservationRoom.reservationId join room on reservationroom.roomId = room.id where reservationRoom.checkInDatetime >= '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and reservationRoom.checkoutdatetime <= '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "'";
+                }
                 dataGridView1.DataSource = Command.getdata(com);
             }
         }

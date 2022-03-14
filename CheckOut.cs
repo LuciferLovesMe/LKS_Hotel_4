@@ -16,7 +16,7 @@ namespace LKS_Hotel_4
         SqlConnection connection = new SqlConnection(Utils.conn);
         SqlCommand command;
         SqlDataReader reader;
-        int idFd;
+        int idFd, reserId;
         
         public CheckOut()
         {
@@ -33,32 +33,49 @@ namespace LKS_Hotel_4
 
         void loadroom()
         {
-            string com = "select reservationRoom.id, room.roomNumber from reservationRoom join room on room.id = reservationRoom.roomId where room.status = 'unavail'";
+            string com = "select * from room where status = 'unavail'";
             comboBox1.DisplayMember = "roomNumber";
             comboBox1.ValueMember = "id";
             comboBox1.DataSource = Command.getdata(com);
 
-            if (comboBox1.Text.Length > 0)
+            command = new SqlCommand("select top(1) id from reservationRoom where roomId = " + comboBox1.SelectedValue + " order by id desc", connection);
+            connection.Open();
+            reader = command.ExecuteReader();
+            reader.Read();
+            reserId = reader.GetInt32(0);
+            connection.Close();
+            
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+
+            if (comboBox1.Text.Length > 0 || comboBox1.SelectedValue != null)
             {
                 loaditem();
                 loadfd();
 
+                button3.Enabled = true;
+                button4.Enabled = true;
+                button5.Enabled = true;
             }
         }
 
         void loaditem()
         {
-            string com = "select item.id, item.name from reservationRequestItem join item on reservationRequestItem.itemid = item.id where reservationRoomId = " + comboBox1.SelectedValue;
+            string com = "select item.id, item.name from reservationRequestItem join item on reservationRequestItem.itemid = item.id where reservationRoomId = " + reserId;
             comboBox2.DisplayMember = "name";
             comboBox2.ValueMember = "id";
             comboBox2.DataSource = Command.getdata(com);
 
-            getPrice();
+            if (comboBox2.Text.Length > 0 || comboBox2.SelectedValue != null)
+            {
+                getPrice();
+            }
         }
 
         void loadfd()
         {
-            string com = "select foodsAndDrinks.name, FDCheckOut.* from FDCheckout join foodsandDrinks on FDCheckout.fdid = foodsanddrinks.id where reservationRoomId = " + comboBox1.SelectedValue;
+            string com = "select foodsAndDrinks.name, FDCheckOut.* from FDCheckout join foodsandDrinks on FDCheckout.fdid = foodsanddrinks.id where reservationRoomId = " + reserId;
             dataGridView2.DataSource = Command.getdata(com);
 
             lbltotalfd.Text = countsubFd().ToString();
@@ -295,6 +312,11 @@ namespace LKS_Hotel_4
                 }
 
                 command = new SqlCommand("update room set status = 'avail' where roomNumber = " + comboBox1.Text, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                command = new SqlCommand("update reservationRoom set checkOutDatetime = getdate() where id = " + comboBox1.SelectedValue, connection);
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
