@@ -16,6 +16,7 @@ namespace LKS_Hotel_4
         SqlConnection connection = new SqlConnection(Utils.conn);
         SqlCommand command;
         SqlDataReader reader;
+        string[] bulan = { "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" };
 
         public ReportGuess()
         {
@@ -87,15 +88,37 @@ namespace LKS_Hotel_4
 
         private void button3_Click(object sender, EventArgs e)
         {
-            command = new SqlCommand("select month, count(id) as num from reservation where year = "+dateTimePicker1.Text + " group by month", connection);
-            connection.Open();
-            reader = command.ExecuteReader();
-            while (reader.Read())
+            foreach (var series in chart1.Series)
             {
-                chart1.Series["Total"].Points.AddXY(reader.GetString(0), reader.GetInt32(1));
+                series.Points.Clear();
             }
+            chart1.ChartAreas[0].AxisX.Interval = 1;
+            for (int i = 0; i < 12; i++)
+            {
+                int x = i + 1;
+                int d = 0;
+                for (int j = 0; j < 12; j++)
+                {
+                    connection.Open();
+                    command = new SqlCommand("select count(id) as num from reservation where year(datetime) = " + dateTimePicker1.Value.ToString("yyyy") + " and month(datetime) = " + x + " group by month", connection);
+                    reader = command.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        d = reader.GetInt32(0);
+                    }
+                    else
+                    {
+                        d = 0;
+                    }
+                    connection.Close();
+                }
 
-            connection.Close();
+                chart1.Series["Guess(es)"].Points.Add(d);
+                chart1.Series["Guess(es)"].Points[i].AxisLabel = bulan[i];
+                chart1.Series["Guess(es)"].Points[i].LegendText = bulan[i];
+                chart1.Series["Guess(es)"].Points[i].Label = d.ToString();
+            }
         }
     }
 }

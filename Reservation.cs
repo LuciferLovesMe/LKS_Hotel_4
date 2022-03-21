@@ -300,9 +300,10 @@ namespace LKS_Hotel_4
             }
             else
             {
-                string com = "insert into reservation values (getdate(), " + Model.id + ", " + idCust + ", '" + lblcode.Text + "', '" + DateTime.Now.ToString("MMMM") + "', '" + DateTime.Now.ToString("yyyy") + "')";
+                string com = "insert into reservation values ('"+ Convert.ToDateTime(dataGridView3.Rows[0].Cells[4].Value) + "', " + Model.id + ", " + idCust + ", '" + lblcode.Text + "', '" + DateTime.Now.ToString("MMMM") + "', '" + DateTime.Now.ToString("yyyy") + "')";
                 try
                 {
+                    command.Parameters.AddWithValue("@c", dataGridView3.Rows[0].Cells[4].Value);
                     Command.exec(com);
                     connection.Close();
 
@@ -315,7 +316,9 @@ namespace LKS_Hotel_4
 
                     for(int i = 0; i < dataGridView3.RowCount; i++)
                     {
-                        command = new SqlCommand("insert into reservationroom values(" + idReser + ", " + dataGridView3.Rows[i].Cells[0].Value + ", getdate(), " + dataGridView3.Rows[i].Cells[2].Value + ", '" + dataGridView3.Rows[i].Cells[3].Value + "', '" + dataGridView3.Rows[i].Cells[4].Value + "', '" + dataGridView3.Rows[i].Cells[4].Value + "')", connection);
+                        command = new SqlCommand("insert into reservationroom values(" + idReser + ", " + dataGridView3.Rows[i].Cells[0].Value + ", getdate(), " + dataGridView3.Rows[i].Cells[2].Value + ", '" + dataGridView3.Rows[i].Cells[3].Value + "',  @checkin, @checkout)", connection);
+                        command.Parameters.AddWithValue("@checkin", dataGridView3.Rows[i].Cells[4].Value);
+                        command.Parameters.AddWithValue("@checkout", dataGridView3.Rows[i].Cells[5].Value);
                         connection.Open();
                         try
                         {

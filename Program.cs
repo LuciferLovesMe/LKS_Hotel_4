@@ -16,7 +16,7 @@ namespace LKS_Hotel_4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splash());
+            Application.Run(new MainLogin());
         }
     }
 }

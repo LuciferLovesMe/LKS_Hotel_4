@@ -12,7 +12,7 @@ namespace LKS_Hotel_4
 {
     class Utils
     {
-        public static string conn = @"Data Source=desktop-00eposj;Initial Catalog=LKS_Hotel_4;Integrated Security=True";
+        public static string conn = @"Data Source=asmodeus;Initial Catalog=LKS_Hotel_4;Integrated Security=True";
     }
 
     class Model

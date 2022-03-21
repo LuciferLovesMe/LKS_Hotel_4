@@ -32,6 +32,7 @@ namespace LKS_Hotel_4
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_guest = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -372,11 +373,14 @@ namespace LKS_Hotel_4
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Total";
+            series1.Name = "Guess(es)";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(719, 404);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
+            title1.Name = "Total Guesses";
+            title1.Text = "Total Guesses";
+            this.chart1.Titles.Add(title1);
             // 
             // button3
             // 
